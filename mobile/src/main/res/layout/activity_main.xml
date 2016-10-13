@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="mark.pokemongohelper.MainActivity"
+    android:visibility="visible">
+
+    <include layout="@layout/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/webViewer" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@mipmap/buttonicon"
+        android:id="@+id/closebutton"
+        app:layout_anchor="@+id/webViewer"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_gravity="top|left" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        android:id="@+id/floatingActionButton2"
+        app:layout_anchor="@+id/webViewer"
+        app:layout_anchorGravity="bottom|left"
+        android:layout_gravity="top|right" />
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
