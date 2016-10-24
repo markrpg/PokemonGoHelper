@@ -88,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopService(new Intent(getApplication(), FloatingButtonService.class));
+                System.exit(0);
+            }
+        });
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.closebutton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
